@@ -8,9 +8,9 @@ namespace EXE5_20210140114_KLMPOK2
 {
     class node
     {
-        int FRONT, REAR;
-
+        int ROQI, BACHRI;
     }
+    
     internal class Program
     {
         static void Main(string[] args)
