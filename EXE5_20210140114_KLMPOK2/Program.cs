@@ -36,5 +36,27 @@ namespace EXE5_20210140114_KLMPOK2
             }
             queue_array[BACHRI] = element;
         }
+        public void remove()
+        {
+            if (ROQI == -1)
+            {
+                Console.WriteLine("Queue underflow\n");
+                return;
+            }
+            Console.WriteLine("\nThe Element deleted fromt he queue is: " + queue_array[ROQI]
+                + "\n");
+            if (ROQI == BACHRI)
+            {
+                ROQI = -1;
+                BACHRI = -1;
+            }
+            else
+            {
+                if (ROQI == max - 1)
+                    ROQI = 0;
+                else
+                    ROQI = ROQI + 1;
+            }
+        }
     }
 }
