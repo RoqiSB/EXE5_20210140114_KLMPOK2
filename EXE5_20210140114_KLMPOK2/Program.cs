@@ -93,6 +93,56 @@ namespace EXE5_20210140114_KLMPOK2
                 Console.WriteLine();
             }
         }
-     
+        static void Main(string[] args)
+        {
+            Node queue = new Node();
+            char ch;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Menu");
+                    Console.WriteLine("1. INSERT");
+                    Console.WriteLine("2. DELETE");
+                    Console.WriteLine("3. DISPLAY");
+                    Console.WriteLine("4. EXIT");
+                    Console.Write("\nEnter your choice (1-4):   ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                Console.Write("Enter a number:  ");
+                                string num = (string)(Console.ReadLine());
+                                Console.WriteLine();
+                                queue.insert(ch);
+                            }
+                            break;
+                        case '2':
+                            {
+                                queue.remove();
+                            }
+                            break;
+                        case '3':
+                            {
+                                queue.display();
+                            }
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("Invalid option !!!");
+                            }
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the values entered");
+                }
+            }
+        }
     }
 }
